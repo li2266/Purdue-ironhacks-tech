@@ -1,0 +1,170 @@
+<!-- NUTESY APP DEVELOPED by AMIN ZAREEI-Purdue Gold IronHacks Spring 2017-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 600px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h1>NUTESY AN APP for EASY VEGETABLE BUYING, It is easy and not complicated but it works effiecntly</h1>
+    <h3>1- You can get the information about nutritional information of farmer markets in Lafayette Area by clicking on animated markers on the following map.</h3>
+    <h4>Note: The unanimated markers show the places where you can buy vegetables quickly.</h4>
+    <h3>2- Now you know where to buy and which one is better in terms of nutritional benefits, please follow the instructions for temperature calculations and getting some advise on which vegetables to buy.</h3>
+    <p>Please Click the Button to Begin the Process of Temperature Calculation</p>
+    <!-- Defining the button for begining the temp calculation -->
+    <button onclick="myFunction()">CLICK!</button>
+    <!-- Defining the elements -->
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <script>
+    //Function for defining temp calculation and suggestion based on the desired ranges
+function myFunction() {
+    var date = prompt("Please enter the date, for the year it should be 2010", "Ex: 20100101");
+
+    var datenum = parseInt(date);
+    //The regression line obtained from Excel software
+    var Temp= -0.000000067575620569372200000000*Math.pow(datenum,3) + 4.07484508423533*Math.pow(datenum,2) - 81905092.9228262*Math.pow(datenum,1) + 548768857238195*Math.pow(datenum,0); 
+        document.getElementById("demo").innerHTML =
+        "The temperature; today can be approximated as:  " + Temp;
+        if (Temp >= 60  && Temp <= 65) { document.getElementById("demo1").innerHTML =
+        "It is recommended to buy LETTUCE  ";
+        }
+        else {document.getElementById("demo2").innerHTML = "It is not recommended to buy LETTUCE  ";
+        }
+        
+        if (Temp >= 45  && Temp <= 55) { document.getElementById("demo3").innerHTML =
+        "It is recommended to buy ONION  ";
+        }
+        else {document.getElementById("demo4").innerHTML = "It is not recommended to buy ONION  ";
+        }
+         if (Temp >= 60  && Temp <= 90) { document.getElementById("demo5").innerHTML =
+        "It is recommended to buy CUCUMBER  ";
+        }
+        else {document.getElementById("demo6").innerHTML = "It is not recommended to buy CUCUMBER  ";
+        }
+}
+
+</script>
+    <div id="map"></div>
+    <script>
+    //Defining the locations on the map and the related infowindow
+      function initMap() {
+          
+        var westl = {lat: 40.425869, lng: -86.908066}; 
+       
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: westl
+        });
+       var markers = [
+    ['West Lafayette Farmers Market', 40.463029, -86.916109],
+    ['Sagamore West Farmers Market', 40.463070, -86.91670],
+    ['Purdue Farmers Market', 40.425781, -86.914312],
+    ['Historic Lafayette Farmers Market', 40.418679, -86.891899]
+];
+var Supermarkets = [
+    ['PayLess Super Market', 40.455270,-86.917498], 
+    ['Fresh City Market', 40.432543,-86.914825],
+    ['Khyber Super Market', 40.425563,-86.907349], 
+    ['Walmart Super Market', 40.456955,-86.932941], 
+    ['ALDI', 40.453880,-86.908743],
+    ['C&T Market', 40.423513,-86.899523],
+    ['Marsh Super Market', 40.451882,-86.913977]
+];
+ // Info window content
+    var infoWindowContent = [
+        ['<div class="info_content">' + '<h1>West Lafayette Farmers Market</h1>' + '<p>Website: <a href="http://wlfarmersmarket.com/">'+
+'http://wlfarmersmarket.com/</a> </p>'+ '<h2>Federal Nutrition Benefits:</h2>' + '<h4>Nutrition Program for Women, Infants, and Children (WIC): YES</h4>'+ '<h4>Senior Farmers Market Nutrition Program (SFMNP): NO</h4>'+ '<h4>Supplemental Nutrition Assistance Program (SNAP): NO</h4>'+ '</div>'],
+        ['<div class="info_content">' + '<h1>Sagamore West Farmers Market</h1>' + '<p>Website: <a href="http://www.westlafayette.in.gov/farmersmarket/">'+
+'http://www.westlafayette.in.gov/farmersmarket/</a> </p>'+ '<h2>Federal Nutrition Benefits:</h2>' + '<h4>Nutrition Program for Women, Infants, and Children (WIC): YES</h4>'+ '<h4>Senior Farmers Market Nutrition Program (SFMNP): YES</h4>'+ '<h4>Supplemental Nutrition Assistance Program (SNAP): NO</h4>'+ '</div>'],
+        ['<div class="info_content">' + '<h1>Purdue Farmers Market</h1>' + '<p>Website: <a href="http://www.purdue.edu/sustainability/initiatives/food/farmersmarket.html/">'+
+'http://www.purdue.edu/sustainability/initiatives/food/farmersmarket.html/</a> </p>'+ '<h2>Federal Nutrition Benefits:</h2>' + '<h4>Nutrition Program for Women, Infants, and Children (WIC): NO</h4>'+ '<h4>Senior Farmers Market Nutrition Program (SFMNP): NO</h4>'+ '<h4>Supplemental Nutrition Assistance Program (SNAP): NO</h4>'+ '</div>'],
+        ['<div class="info_content">' + '<h1>Historic Lafayette Farmers Market</h1>' + '<p>Website: <a href="http://www.lafayettefarmersmarket.com/">'+
+'http://www.lafayettefarmersmarket.com/</a> </p>'+ '<h2>Federal Nutrition Benefits:</h2>' + '<h4>Nutrition Program for Women, Infants, and Children (WIC): NO</h4>'+ '<h4>Senior Farmers Market Nutrition Program (SFMNP): NO</h4>'+ '<h4>Supplemental Nutrition Assistance Program (SNAP): NO</h4>'+ '</div>'],
+        ['<div class="info_content">' + '<h1>PayLess Super Market</h1>' + '<p>Website: <a href="https://www.pay-less.com/?CID=PDM-YEXT.GMB-LOCAL/">'+
+'https://www.pay-less.com/?CID=PDM-YEXT.GMB-LOCAL/</a> </p>' +'</div>'],
+        ['<div class="info_content">' + '<h1>Fresh City Market</h1>' + '<p>Website: <a href="https://freshcitymarket.com/">'+
+'https://freshcitymarket.com/</a> </p>' +'</div>'],
+        ['<div class="info_content">' + '<h1>Khyber Super Market</h1>' + '<p>Website: <a href="https://www.facebook.com/Khyber-Super-Market-134330216598310/">'+
+'https://www.facebook.com/Khyber-Super-Market-134330216598310/</a> </p>' +'</div>'],
+        ['<div class="info_content">' + '<h1>Walmart Super Center</h1>' + '<p>Website: <a href="https://www.walmart.com/store/2339/">'+
+'https://www.walmart.com/store/2339/</a> </p>' +'</div>'],
+        ['<div class="info_content">' + '<h1>ALDI</h1>' + '<p>Website: <a href="https://www.aldi.us/">'+
+'https://www.aldi.us/</a> </p>' +'</div>'],
+        ['<div class="info_content">' + '<h1>C&T Market</h1>' + '<p>Website: <a href="https://www.yelp.com/biz/c-and-t-market-west-lafayette/">'+
+'https://www.yelp.com/biz/c-and-t-market-west-lafayette/</a> </p>' +'</div>'],
+        ['<div class="info_content">' + '<h1>Marsh Super Market</h1>' + '<p>Website: <a href="http://www.marsh.net/">'+
+'http://www.marsh.net/</a> </p>' +'</div>']
+    ];       
+    // Add multiple markers to map
+    var infoWindow = new google.maps.InfoWindow(), marker, i;  
+      // Place each marker on the map  
+    for( i = 0; i < markers.length; i++ ) {
+        var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+        var item_1 = new google.maps.LatLng(40.425869,-86.908066);
+        var bounds = new google.maps.LatLngBounds();
+        bounds.extend(item_1);
+        marker = new google.maps.Marker({
+            position: position,
+            animation: google.maps.Animation.BOUNCE,
+            map: map,
+            //animation: google.maps.Animation.BOUNCE,
+            title: markers[i][0]
+        });
+        // Add info window to marker    
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+                infoWindow.setContent(infoWindowContent[i][0]);
+                infoWindow.open(map, marker);
+            }
+        })(marker, i));
+
+        // Center the map to fit all markers on the screen
+        map.fitBounds(bounds);
+    }
+     for( j = 0; j < Supermarkets.length; j++ ) {
+        var position = new google.maps.LatLng(Supermarkets[j][1], Supermarkets[j][2]);
+        var item_1 = new google.maps.LatLng(40.425869,-86.908066);
+        var bounds = new google.maps.LatLngBounds();
+        bounds.extend(item_1);
+        marker = new google.maps.Marker({
+            position: position,
+            map: map,
+            //animation: google.maps.Animation.BOUNCE,
+            title: Supermarkets[j][0]
+        });
+        // Add info window to marker    
+        google.maps.event.addListener(marker, 'click', (function(marker, j) {
+            return function() {
+                infoWindow.setContent(infoWindowContent[j][0]);
+                infoWindow.open(map, marker);
+            }
+        })(marker, j));
+
+        // Center the map to fit all markers on the screen
+        map.fitBounds(bounds);
+    }
+    // Set zoom level
+    var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+        this.setZoom(11);
+        google.maps.event.removeListener(boundsListener);
+    });
+// Load initialize function
+google.maps.event.addDomListener(window, 'load', initMap);  
+      }        
+      
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACyoucfqyYx3TRy7JlCv-z53uMPWPTzwc
+&callback=initMap">
+    </script>
+  </body>
+</html>

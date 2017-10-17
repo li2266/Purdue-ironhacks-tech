@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>PURDUE IRONHACK SPRING 2016 </title>
+				<script src="http://d3js.org/d3.v3.min.js"></script>
+				    
+		<style type="text/css">
+		/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height:75%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 750%;
+        margin: 0;
+        padding: 0;
+      }		
+		</style>
+	</head>
+	<body>
+	<header align = "center">
+			<h1>PURDUE IRONHACK SPRING 2016</h1>
+			<h2>Cheap and Fresh Vegetables </h2>
+    </header>
+	
+	
+		<script>
+			d3.csv("maizee.csv", function (data){
+			//Width and height
+			var canvas = d3.select ("body").append("svg")
+				.attr("width", 500)
+				.attr("height", 500)
+				
+			canvas.selectAll("rect")
+				.data(data)
+				.enter()
+				   .append("rect")
+				   .attr("width", function (d) {return d.ARP * 10;})
+					.attr("height", 48)
+					.attr("y", function (d, i)  {return i * 50;})
+					.attr("fill", "blue");
+			
+			canvas.selectAll("text")
+				.data(data)
+				.enter()
+				   .append("text")
+				   .attr("fill", "white")
+				   	.attr("y", function (d, i)  {return i * 50 + 24;})
+					.text( function (d) {return d.form;})
+					
+			
+					
+			});
+			</script>
+			   <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 40.475, lng: -86.9919},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR1tnCUlU01oi24ShsAng7ATk1DVfs490&callback=initMap"
+    async defer></script>
+    
+	</body>
+
+	
+	
+	
+	
+	<footer align = "center">
+		<p>&copy; Copyright 2017 Web Design and Data Integration by Bolaji Fola.</p>
+	</footer>
+	
+</html>

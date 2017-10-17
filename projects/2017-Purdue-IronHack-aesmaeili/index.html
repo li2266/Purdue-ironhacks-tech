@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      Vegetable Finder App 
+    </title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/weather-icons.min.css">
+
+  </head>
+  <body>
+    <!-- The top navigation bar. let's keep it simple -->
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper top-nav-bar small">
+          <a href="#" class="brand-logo center"><img id="top-nav-logo" class="hide-on-small-only" src="favicon.png"/></a>
+          <ul class="left">
+            <li class="no-hover">
+              <a href="#" data-activates="slide-out" class="menu-sidebar-collapse btn-floating btn-flat btn-medium waves-effect waves-light white">
+                <i class="large material-icons icon-gray">menu</i>
+              </a>
+            </li>
+            <!--
+              <div class="btn-floating wave-effect wave-light blue">
+              <li><i class="material-icons menu-btn">menu</i> </li>
+              </div>
+
+              <li><span class="menu-btn">&#9776;</span></li>
+            -->
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- Let's add the left sidebar -->
+    <aside id="left-sidebar-nav">
+      <ul id="slide-out" class="side-nav leftside-navigation ps-container ps-active-y" style="left:0px; height: 100%;">
+        <div class="col s12 ">
+          <div class="row" id="settingTitle"> Settings </div><hr class="hruleStyle"/>
+          <div class="row">
+            <form class="col s12" action="#">
+              <div class="row">
+                <label for="distance">Distance(miles):</label>
+                <div class="range-field">
+                  <input type="range" id="distance" min = "1" max = "50" value="1" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </ul>
+    </aside>
+    <div class="container">
+
+      <div class="row"><!-- the left pannel is removed for good
+        <div class="col m2 l3">
+          Ok lets show something here
+        </div>
+        -->
+
+        <div id="rightPanel" class="col s12 m12 l12">
+          <div class="card">
+            <!--
+              <span class="card-title activator grey-text text-darken-4">Title goes here<i class="material-icons right">more_vert</i></span>
+            -->
+            <div id="main-map"> 
+              <!-- The map is going to be shown here -->
+            </div>
+            <div class="card-content card-content-overlay" style="display:none;">
+              <a class="btn-floating btn-move-up wave-effect wave-light pink right pulse">
+                <i class="material-icons activator">add</i>
+              </a>
+              <p class="truncate">A summary</p>
+            </div>
+            <div class="card-reveal card-reveal-transparent">
+              <span class="card-title activator grey-text text-darken-4">Title goes here<i class="material-icons right">close</i></span>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+              tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+              vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+              no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+    <script src="assets/js/utility.js" charset="utf-8"></script>
+    <script src="assets/js/scripts.js" charset="utf-8"></script>
+    <script src="assets/js/jquery.simpleWeather.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAS-v5CNcNmifoGFkXAZaDiMPz8nxEQIo4&libraries=places"></script>
+
+  </body>
+</html>

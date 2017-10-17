@@ -1,0 +1,110 @@
+search.ams.usda.gov/farmersmarkets,Agricultural Marketing Service
+https://www.wcc.nrcs.usda.gov,AWDB (air and water database)
+gis.ers.usda.gov/arcgis,Food Environment Atlas
+quickstats.nass.usda.gov,Quick Stats Agricultural Database
+http://data.cacfp-sfsp.opendata.arcgis.com,Summer Food Service Program
+http://services1.arcgis.com/,Summer Food Service Program
+apps.fs.usda.gov,US Forest Service Motor Vehicle Use Map: Roads and Trails
+nassgeodata.gmu.edu,VegScape - Vegetative Condition Explorer
+www.ncdc.noaa.gov/paleo-search,NCEI Paleo Web Service
+marketnews.usda.gov,Agricultural Marketing Service
+www.census.gov/econ,manufacturing & Trade Inventories & Sales
+www.zillow.com/webservice,Zillow
+data.cityofchicago.org/api/views/pxyq-qhyd,Parks - Chicago Park District Artworks
+data.cityofchicago.org/api/views/s6ha-ppgi,Affordable Rental Housing Developments
+data.cityofchicago.org/api/views/vcti-mbcd,Parks - Chicago Park District Buildings
+data.cityofchicago.org/api/views/eix4-gf83,Parks - Chicago Park District Facilities
+data.cityofchicago.org/api/views/ejsh-fztr,Parks - Chicago Park District Park Boundaries
+data.illinois.gov/api/views/miqf-743d,SSMMA Median Home Value
+data.cityofchicago.org/api/views/ijzp-q8t2,Crimes - 2001 to present
+data.cityofchicago.org/api/views/t2qc-9pjd,Chicago Traffic Tracker - Congestion Estimates by Regions
+data.cityofchicago.org/api/views/n4j6-wkkf,Chicago Traffic Tracker - Congestion Estimates by Segments
+data.cityofchicago.org/api/views/emtn-qqdi,Chicago Traffic Tracker - Historical Congestion Estimates by Region
+data.cityofchicago.org/api/views/75e5-35kf,Chicago Public Schools - School Locations SY1617
+data.cityofchicago.org/api/views/wryv-d7zf,Nearby Cook County Grocery Store Chains
+data.cityofchicago.org/api/views/ddxq-pdr6,Nearby Independent Cook County Grocery Stores
+data.cityofchicago.org/api/views/x5xx-pszi,Farmers Markets - 2015
+data.cityofchicago.org/api/views/28km-gtjn,Fire Stations
+data.cityofchicago.org/api/views/cpc6-pxmp,Libraries - 2016 Visitors by Location
+data.cityofchicago.org/api/views/acer-3nmf,Libraries - 2016 Circulation by Location
+data.cityofchicago.org/api/views/i6bp-fvbx,Chicago Street Names
+data.cityofchicago.org/api/views/zidz-sdfj,Landmark Districts
+data.cityofchicago.org/api/views/tdab-kixi,Individual Landmarks
+data.cityofchicago.org/api/views/wrvx-zpw5,Performance Metrics - Chicago Park District - Park Security Checks
+data.cityofchicago.org/api/views/iqnk-2tcu,Public Health Statistics- Selected public health indicators by Chicago community area
+data.cityofchicago.org/api/views/65ce-agii,Chicago Public Schools - Safe Passage Routes SY1617
+data.cityofchicago.org/api/views/xkur-4g6u,Pedway Routes
+data.cityofchicago.org/api/views/f7f2-ggz5,Alternative Fuel Locations
+data.cityofchicago.org/api/views/v6kn-gc9b,Pedestrian Streets
+data.cityofchicago.org/api/views/24zt-jpfn,Boundaries - Police Districts (current)
+data.cityofchicago.org/resource,Dataset of Chicago
+data.ny.gov/api/views/nhjr-rpi2,Facilities Licensed by the Department of Motor Vehicles (DMV)
+data.cityofnewyork.us/api/views/9mhd-na2n,New York City Population By Boroughs
+data.cityofnewyork.us/api/views/37cg-gxjd,New York City Population By Census Tracts
+data.cityofnewyork.us/api/views/xi7c-iiu2,New York City Population By Community Districts
+data.ny.gov/api/views/55k6-h6qq,New York State Locality Hierarchy with Websites
+data.cityofnewyork.us/api/views/8qru-nyj8/,Historical Data Of Foreign-Born Population in New York City
+data.cityofnewyork.us/api/views/432v-a7hc,Population Of Selected Asian Race Subgroups In New York City By Borough
+data.cityofnewyork.us/api/views/fn6f-htvy,New York City Museums
+data.cityofnewyork.us/api/views/w9du-8cu6,Hispanic Population By Selected Subgroups By Borough
+data.cityofnewyork.us/api/views/w449-f4d7,Directory Of DCP Offices
+data.cityofnewyork.us/api/views/6qzy-b4x8,Total Housing Units By Occupancy Status And Tenure By Borough
+data.cityofnewyork.us/api/views/43hw-uvdj,New York City Art Galleries
+data.cityofnewyork.us/api/views/j8gx-kc43,New York City Farmers Markets
+data.cityofnewyork.us/api/views/jb7j-dtam,New York City Leading Causes of Death
+data.cityofnewyork.us/api/views/43nn-pn8j/,DOHMH New York City Restaurant Inspection Results
+data.cityofnewyork.us/api/views/w9ei-idxz,New York City Locations Providing Seasonal Flu Vaccinations
+data.cityofnewyork.us/api/views/mqdy-gu73,City Store - The Official Store of the City of New York
+data.ny.gov/api/views/vfrh-bvhu,Open.ny.gov API Catalog
+data.cityofnewyork.us/api/views/xzy8-qqgf,Demographic Projection Report - Enrollment Projections - New York City Public Schools prepared by Statistical Forecasting
+enviroatlas.epa.gov/arcgis/,"EnviroAtlas - New York City, NY - BenMAP Results by Block Group"
+data.ny.gov/api/views/mkqe-r4dx,Recharge New York Customers
+data.cityofnewyork.us/api/views/gysc-yn4h,NYC City Hall Library Catalog
+data.ny.gov/api/views/g8h7-98zz,New York State Career Centers
+data.ny.gov/api/views/7bg2-3faq,Bicycle Routes Across New York State
+data.ny.gov/api/views/bzam-7she/,Bicycle Routes Across New York State: Map
+data.ny.gov/api/views/wcwd-s5vt,Agricultural Fairs in New York State
+data.ny.gov/api/views/qfsu-zcpv/,Fire Department Directory for New York State
+data.cityofnewyork.us/api/views/hg8x-zxpr/,Housing New York Units by Building
+data.cityofnewyork.us/api/views/hq68-rnsi,Housing New York Units by Project
+data.ny.gov/api/views/bpkx-gmh7,Alternative Fuel Stations in New York
+data.ny.gov/api/views/aunm-xkyb,Sidewalks and Curb Ramps on the New York State-Owned Highway System
+data.ny.gov/api/views/ndex-ad5r,Bank-Owned ATM Locations in New York State
+data.ny.gov/api/views/b7jj-bh4g,New York State Registered Tax Return Preparers and Facilitators
+data.ny.gov/api/views/i77z-w4nh,New York State Fallen Firefighters Memorial Roll of Honor
+data.cityofnewyork.us/api/views/pa5t-ktd3,Projected New Housing Starts - as Used in Enrollment Projection
+data.ny.gov/api/views/dh9m-5v4d,"Local Area Unemployment Statistics (LAUS), Seasonally Adjusted Data: Beginning 1976"
+data.cityofnewyork.us/api/views/mdcw-n682,Greenbook
+data.ny.gov/api/views/dtfv-pchi,Diesel Retail Price Weekly Average by Region: Beginning 2007
+data.ny.gov/api/views/nqur-w4p7,Gasoline Retail Prices Weekly Average by Region: Beginning 2007
+data.cityofnewyork.us/api/views/xyye-rtrs,Neighborhood Names GIS
+data.cityofnewyork.us/api/views/q2z5-ai38,Neighborhood Tabulation Areas
+data.cityofnewyork.us/api/views/qybk-bjjc,School Safety Report
+data.cityofnewyork.us/api/views/p9cw-7gsv,Boardwalk
+data.cityofnewyork.us/api/views/6hbv-tek4,Hydrography Structures
+data.cityofnewyork.us/api/views/tbgj-tdd6,Mobile Telecommunication Franchise Poletop Installation Locations
+data.cityofnewyork.us/api/views/krev-7efn,NYC Street Centerline (CSCL)
+data.cityofnewyork.us/api/views/dwer-xbg,Railroad Structure
+data.cityofnewyork.us/api/views/9m35-jch2,NYC OpenRecords – FOIL Request Data
+data.cityofchicago.org/api/views/n9it-hstw,Boundaries - Police Beats (current)
+data.cityofchicago.org/api/views/vvxi-nsph,Performance Metrics - City Colleges of Chicago - Graduation Rates
+data.cityofchicago.org/api/views/unjd-c2ca,Boundaries - ZIP Codes
+data.cityofchicago.org/api/views/3tu3-iesz,Boundaries - Industrial Corridors (current)
+data.cityofchicago.org/api/views/fe34-kcci/,Boundaries - Central Business District
+data.cityofchicago.org/api/views/qmqz-2xku,Beach Water Quality - Automated Sensors
+data.cityofchicago.org/api/views/vc9r-bqvy,Sex Offenders
+data.cityofchicago.org/api/views/qqqh-hgyw,Life Safety Evaluations
+data.cityofchicago.org/api/views/eaff-5ff2,Performance Metrics - Transportation
+data.cityofchicago.org/api/views/f7f2-ggz5,Alternative Fuel Locations
+data.cityofchicago.org/api/views/cbyb-69xx,Bike Racks
+data.cityofchicago.org/api/views/x8fc-8rcq,"Libraries - Locations, Hours and Contact Information"
+data.cityofchicago.org/api/views/m4mk-9bzx,Ward Offices - Map - Exportable
+data.cityofchicago.org/api/views/msrk-w9ih,Cooling Centers
+data.cityofchicago.org/api/views/azpf-uc4s,Condom Distribution Sites
+data.cityofchicago.org/api/views/h243-v2q5,Warming Centers
+data.cityofchicago.org/api/views/z8bn-74gv,Police Stations
+data.cityofchicago.org/resource/uahe-iimk,houses for rent
+data.cityofchicago.org/resource/cjg8-dbka,hospitals in chicago
+data.cityofchicago.org/resource/x8fc-8rcq,libraries in chicago
+data.cityofchicago.org/resource/iqnk-2tcu,information about the health in a community
+data.cityofchicago.org/resource/4xwe-2j3y,parks in chicago city

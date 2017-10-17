@@ -1,0 +1,13 @@
+{
+  "js": {
+    "errors": [],
+    "resourceErrors": [],
+    "messages": []
+  },
+  "css": {},
+  "html": [
+    "error: Non-space characters found without seeing a doctype first. Expected “<!DOCTYPE html>”.",
+    "error: Element “head” is missing a required instance of child element “title”.",
+    "error: Element “title” not allowed as child of element “body” in this context. (Suppressing further errors from this subtree.)"
+  ]
+}

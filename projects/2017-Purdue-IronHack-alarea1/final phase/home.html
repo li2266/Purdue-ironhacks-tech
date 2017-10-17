@@ -1,0 +1,1194 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cheap and Fresh!</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/style.css" />
+
+	<style>
+		body{
+			height:100%;
+			width:100%;
+		}
+		.searchbox{
+			
+			box-sizing: border-box;
+			box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+			border:2px solid transparent;
+			height:40px;
+
+		}
+		#map {
+        width: 800px;
+        height: 500px;
+        text-align: center;
+        border: 12px solid rgba(255, 255, 255, 0.5);
+        position:relative;
+        float: right;
+      }
+        #searchinput{
+        	font-family: Roboto;
+        	background-color: #fff;
+        	font-size: 15px;
+        	font-weight: 200;
+        	text-align: center;
+        	margin-left: 15px;
+        	margin-top: 15px;
+        	margin-bottom:15px;
+        	padding: 0 10px 0 10px;
+        	width:80%;
+        }
+        #searchinput:hover{
+        	border-color:#4d90fe;
+        }
+         #searchinput:focus{
+        	border-color:#4d90fe;
+        }
+        
+
+        #type-selector {
+        color: #fff;
+        background-color: #4d90fe;
+        padding: 10px 10px 0px 10px;
+      }
+
+
+        #type-selector label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }
+         #target {
+        width: 345px;
+      }
+
+         #over_map {
+		position:absolute;
+		background: rgba(225, 225, 225, .0);
+        width: 25%;
+        height: 500px;
+       
+        margin-left: 0.7em;
+       
+        z-index:2;
+      }
+      	#over_map a:hover{
+		background-color: #87CEFA;
+      }
+
+         .leftnav {
+	    height: 90%;
+	    width: 0;
+	    position: relative;
+	    z-index: 1;
+	    top: 0;
+	    left: 0;
+	    background-color: rgba(255,255,255,0.99);
+	    overflow-x: hidden;
+	    transition: 0.5s;
+	    padding-top: 50px;
+
+	    text-align:center;
+
+	}
+
+	      .leftnav a {
+	    padding: 8px 8px 8px 32px;
+	    text-decoration: none;
+	    font-size: 25px;
+	    color: #818181;
+	    display: block;
+	    transition: 0.3s
+
+	}
+
+	      .leftnav a:hover{
+	    color: #f1f1f1;
+	}
+
+	       .leftnav .closebtn {
+	    position: absolute;
+	    top: 0;
+	    right: 15px;
+	    font-size: 30px;
+	}
+			#showboard{
+        width: 400px;
+        height: 400px;
+        background-size: 100% 100%;
+        background-color: #44BB8C;
+
+
+      }
+        #center {
+	    margin-left: 10%;
+	    margin-top: 5%; 
+	    width: 80%;
+	    text-align: center;
+	    font-size: 17px;
+	   
+	     }
+	    #board{
+     		 	width:100%;
+     		 	height: 100%;
+     		 	background-color: #44BB8C;
+     		 	word-wrap: break-word;
+     		 }
+
+      	#marketchart{
+      	font-family: "Source Sans Pro", Helvetica, sans-serif;
+      	font-size: 15px;
+      	font-weight: 400;
+        width: 40%;
+        height: 45%;
+     		 }
+     	#store {
+		height: 300px;
+		width: 400px;
+	    -webkit-box-shadow: 1px 1px 1px 1px #B8B8B8;
+		box-shadow: 1px 1px 1px 1px #B8B8B8;
+		font-family: "Source Sans Pro", Helvetica, sans-serif;
+      	font-size: 15px;
+		background-color: #FFFFFF;
+		position: relative;
+		float:left;
+
+}
+
+     #experiment {
+     	position:relative;
+     	float:right;
+     	top:100px;
+     	left:-80px;
+       -webkit-perspective: 800px;
+       -webkit-perspective-origin: 50% 200px;
+     }
+     #cube {
+       margin-top:100px;
+       position: relative;
+       margin: 0 auto;
+       height: 400px;
+       width: 400px;
+       -webkit-transition: -webkit-transform 2s linear;
+       -webkit-transform-style: preserve-3d;
+     }
+     .face {
+       position: absolute;
+       height: 360px;
+       width: 360px;
+       padding: 20px;
+       background-color: rgba(50, 50, 50, 0.7);
+     }
+     #cube .one  {
+       -webkit-transform: rotateX(90deg) translateZ(200px);
+     }
+
+     #cube .two {
+       -webkit-transform: translateZ(200px);
+     }
+
+     #cube .three {
+       -webkit-transform: rotateY(90deg) translateZ(200px);
+     }
+
+     #cube .four {
+       -webkit-transform: rotateY(180deg) translateZ(200px);
+     }
+
+     #cube .five {
+       -webkit-transform: rotateY(-90deg) translateZ(200px);
+     }
+
+     #cube .six {
+       -webkit-transform: rotateX(-90deg) translateZ(200px) rotate(180deg);
+     }
+///////////////////////////整体样式//////////////////////////////////
+*, *:before, *:after {
+  box-sizing: inherit;
+  font-family: -apple-system, BlinkMacSystemFont, "Microsoft Yahei", sans-serif;
+  margin: 0px;
+}
+.weather{
+  font-family: serif;
+    font-size: 18px;
+  color:rgba(230,206,49,0.3);
+
+}
+.weather2{
+  font-family: serif;
+    font-size: 18px;
+  color:rgba(48,184,68,0.3);
+
+}
+.weather img{
+  opacity:0.3
+}
+.weather2 img{
+  opacity:0.3
+}
+.city {
+  font-size: 18px;
+  font-weight: bold;
+}
+.city2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.description, .time {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: gray;
+}
+.description2, .time2 {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: gray;
+}
+.weather-info{
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Microsoft Yahei", sans-serif;
+  color:rgba(255,255,255,0.2);
+  width：80%;
+  height：80%;
+}
+.weather-info2{
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Microsoft Yahei", sans-serif;
+  color:rgba(255,255,255,0.2);
+  width：80%;
+  height：80%;
+}
+.daily-forecast{
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Microsoft Yahei", sans-serif;
+  color:rgba(255,255,255,0.2);
+  width：80%;
+  height：80%;
+
+}
+.daily-forecast2{
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Microsoft Yahei", sans-serif;
+  color:rgba(255,255,255,0.2);
+  width：80%;
+  height：80%;
+
+}
+
+.orange-bg {
+  background-color: #f0ad4e;
+}
+
+.gray-bg {
+  background-color: #999;
+}
+
+.blue-bg {
+  background-color: #428bca;
+}
+.tdc{
+  font-family: serif;
+    font-size: 18px;
+  color:rgba(230,206,49,0.3);
+}
+.tdc2{
+  font-family: serif;
+    font-size: 18px;
+  color:rgba(48,184,68,0.3);
+}
+.forecasts>h2{
+  font-family: serif;
+    font-size: 18px;
+  color:rgba(230,206,49,0.3);
+}
+.forecasts2>h2{
+  font-family: serif;
+    font-size: 18px;
+  color:rgba(48,184,68,0.3);
+}
+
+
+	</style>
+</head>
+<body>
+	<header id = "header" class="alt">
+		<div class = "inner">
+		<h1>Cheap and Fresh</h1>
+		<p> Wanna cheap and fresh vegi? </p>
+		</div>
+
+	</header>
+	<div id="wrapper" style="height: 120%;">
+		<div id = "map"></div>
+		
+		<div id="over_map">
+        	<div style="font-size:30px;font-weight:300;background:rgba(255,255,255,.99);cursor:pointer;margin-left: 0%;height:10%" onclick="slideNav()">&#9776; Search</div>
+        	<div id="slideNav" class="leftnav">
+			<a href="#" class="closebtn" onclick="backNav()">&times;</a>
+			<input id="searchinput" class="controls" type="text" placeholder="Search Box">
+			<a href="#" onclick="searchByKeyword('market')">All</a>
+			<a href="#" onclick="searchByKeyword('grocery')">Farmer Stores</a>
+        	<a href="#" onclick="searchByKeyword('vegetable')">Vegetables</a>
+			<a href="#"onclick="clearSearch()">Reset</a>
+			</div>
+		</div>
+
+		<section class="main items" style="float:left;height: auto;width: 100%;margin-left:1px;margin-top: 1em;">
+
+			<div id="marketchart">
+            	<div style="position: absolute;font-family:&quot;Pacifico&quot;, cursive;text-align: center; margin-top:4.7em;margin-left:5.5em;font-size: 28px;">Season<br>Chart</div>
+            </div>
+
+
+				<div id="showboard">
+
+					<div id="center">
+						<b>What Vegis can you buy now:</b>
+						<div id="board"></div>
+					</div>
+				</div>
+				
+            
+			</section>
+		</div>
+		<div id="store"><CENTER><p id="storeNumber" style="font-size: 60px;"></p>stores<br>  	near you <br></CENTER> </div>
+		
+<div id="experiment">
+    <div id="cube">  
+      <div class="face one">
+       
+                 
+      </div>
+      <div class="face two">
+          <table class="weather-info2">
+                <tr>
+                  <td class="tdc2">Wind</td>
+                  <td id="weather-wind2">
+                    <p class="wind-speed2"></p>
+                    <p class="wind-deg2"></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tdc2">Cloudiness</td>
+                  <td id="weather-cloudiness2"></td>
+                </tr>
+                <tr>
+                  <td class="tdc2">Pressure</td>
+                  <td id="weather-pressure2"></td>
+                </tr>
+                <tr>
+                  <td class="tdc2">Humidity</td>
+                  <td id="weather-humidity2"></td>
+                </tr>
+                <tr>
+                  <td class="tdc2">Sunrise</td>
+                  <td id="weather-sunrise2"></td>
+                </tr>
+                <tr>
+                  <td class="tdc2">Sunset</td>
+                  <td id="weather-sunset2"></td>
+                </tr>
+                <tr>
+                  <td class="tdc2">Geo coords</td>
+                  <td id="weather-geo2"><a href="##"></a></td>
+                </tr>
+        </table>
+      </div>
+
+
+      <div class="face three">
+        <div class = "image-me"></div>
+        <div class="forecasts2">
+          <h2>Weather forecasts</h2>
+            <div class="forecast-content">
+                <table class="daily-forecast2"></table>
+            </div>
+
+        </div>
+           
+        </div>
+
+
+      <div class="face four">
+      	 <div class="weather2">
+                  <div class="city2"></div>
+
+                  <div class="temp2">
+                    <img src="" class="picture2">
+                    <span></span>
+                  </div>
+
+                  <span class="description2"></span>
+                  <span class="time2"></span>
+                </div>   
+
+      </div>
+
+
+      <div class="face five">
+       
+             
+      </div>
+
+
+      <div class="face six">
+       
+        
+      </div>
+
+
+    </div>
+  </div>	
+    		<script src="js/jquery.min.js"></script>
+			<script src="js/skel.min.js"></script>
+			<script src="js/util.js"></script>
+			<script src="js/main.js"></script>
+            <script src="https://d3js.org/d3.v4.min.js"></script>
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    		
+  
+<script type="text/javascript">
+	//动作设置//
+var xAngle = 0, yAngle = 0;
+document.addEventListener('keydown', function(e)
+{
+  switch(e.keyCode)
+  {
+
+      case 37: // left
+          yAngle -= 90;
+          break;
+
+      case 38: // up
+          xAngle += 90;
+          break;
+
+      case 39: // right
+          yAngle += 90;
+          break;
+
+      case 40: // down
+          xAngle -= 90;
+          break;
+  };
+
+  document.getElementById('cube').style.webkitTransform = "rotateX("+xAngle+"deg) rotateY("+yAngle+"deg)";
+}, false);
+
+/////////
+var weatherAPI = 'weather';
+var hourlyAPI  = 'forecast';
+var dailyAPI   = 'forecast/daily';
+var imgAPI     = 'http://openweathermap.org/img/w/';
+var imgType    = '.png';
+var wFlag = true;
+var hFlag = true;
+
+$(document).ready(function(){
+    dataRequest('chicago');
+    dataRequest2('chicago');
+    
+});
+
+function dataRequest(searchKey){
+    getData(weatherAPI, searchKey).done(function(data){
+      setWeatherInfo(data);
+
+    });
+    getData(dailyAPI, searchKey).done(function(data){
+      $('.daily-forecast').empty();
+  		setDailyForecast(data);
+
+    });
+}
+function dataRequest2(searchKey){
+    getData(weatherAPI, searchKey).done(function(data){
+      setWeatherInfo2(data);
+      wFlag = true;
+    });
+    getData(dailyAPI, searchKey).done(function(data){
+      $('.daily-forecast2').empty();
+  		setDailyForecast2(data);
+  		dFlag = true;
+    });
+}
+/////////////getData函数,ajax///////////////////////////////
+
+function getData(pathName,searchKey){
+    let appId = '489646e192394f377c0d39c76399cf49';
+    return $.ajax({
+    url: `http://api.openweathermap.org/data/2.5/${pathName}`,
+      type: 'GET',
+      data:{
+        'q': searchKey,
+  			'units': 'metric',
+  			'appid': appId
+      }
+    });
+
+}
+////////////////////////////////////////////////////////////////
+
+function setWeatherInfo(dataSource) {
+
+	let country  = dataSource.sys.country;                  //国家
+	let cityName = dataSource.name;							//城市
+	let imgName  = dataSource.weather[0].icon;				//图片名
+	let imgSrc   = `${imgAPI}${imgName}${imgType}`;			//图片URL
+	let des      = dataSource.weather[0].description;		//描述
+	let timeStr  = dataSource.dt;					//时间
+	let time     = dateInfo(timeStr);
+	let wind     = numberFixed(dataSource.wind.speed);		//风速
+	//let windType = windLevel(wind);
+	let degree   = dataSource.wind.deg;						//风向
+	//let windStr = `${windDirection(degree)} ( ${degree} )`;
+	let temp     = numberFixed(dataSource.main.temp);		//温度
+	let pressure = dataSource.main.pressure;				//气压
+	let humidity = dataSource.main.humidity;				//湿度
+	let geo      = dataSource.coord;						//经纬度
+	let sunrise  = dataSource.sys.sunrise;					//日出时间
+	let sunset   = dataSource.sys.sunset;					//日落时间
+	let sunriseTime = timeFormat(sunrise);
+	let sunsetTime  = timeFormat(sunset);
+
+	$('.city').text(`Weather in ${cityName}, ${country}`);
+	$('.picture').attr('src', imgSrc);
+	$('.temp>span').text(`${temp} °C`);
+	$('.description').text(des);
+	$('.time').text(time);
+	//$('.wind-speed').text(`${windType} ${wind}m/s`);
+	//$('.wind-deg').text(windStr);
+	$('#weather-cloudiness').text(des);
+	$('#weather-pressure').text(`${pressure} hpa`);
+	$('#weather-humidity').text(`${humidity}%`);
+	$('#weather-sunrise').text(sunriseTime);
+	$('#weather-sunset').text(sunsetTime);
+	$('#weather-geo').text(`[${geo.lat},${geo.lon}]`);
+}
+function numberFixed(num) {
+
+	return num.toFixed(1);
+}
+
+function setDailyForecast(dataSource) {
+
+	let data = dataSource.list;
+	let htmlStr = '';
+
+	for (let i = 0; i < 4; i++) {
+
+		let time = data[i].dt;
+		let dateString = dateInfo(time);
+		let imgName = data[i].weather[0].icon;
+		let dayTemp = numberFixed(data[i].temp.day);
+		let nightTemp = numberFixed(data[i].temp.night);
+		let rainDes = data[i].weather[0].description;
+		let windSpeed = data[i].speed;
+		let cloud = data[i].clouds;
+		let pressure = data[i].pressure;
+
+		htmlStr += `<tr><td class="daily-date">${dateString}
+				    <img src="${imgAPI}${imgName}${imgType}"></td>
+		   		    <td class="daily-weather-info"><div class="daily-top">`;
+
+		if (parseFloat(dayTemp) < 0) {
+
+			htmlStr += `<span class="blue-bg">`;  //最高温度负数时 蓝色
+		} else {
+
+			htmlStr += `<span class="orange-bg">`;
+		}
+
+	    htmlStr += `${dayTemp} °C</span><span class="gray-bg">${nightTemp} °C</span>
+		           <i>${rainDes}</i></div><div class="daily-middle">${windSpeed}</div>
+		           <div class="daily-bottom">clouds: ${cloud}% , ${pressure} hpa
+		           </div></td></tr>`;
+	}
+
+	$('.daily-forecast').append(htmlStr);
+}
+//////////日期格式, like: Thu 20 Aug///////
+function timeFormat(t) {
+
+	let time = new Date(t * 1000);
+	let hour = time.getHours();
+	let minute = time.getMinutes();
+	let minuteStr = minute < 10 ? `0${minute}` : `${minute}`;
+	let timeString = hour < 10 ? `0${hour}:${minuteStr}` : `${hour}:${minuteStr}`;
+	return timeString;
+}
+
+function dateInfo(date) {
+
+	let temp = new Date(date * 1000);
+	let month = monthFormat(temp.getMonth());
+	let day   = dayFormat(temp.getDay());
+	let dateStr = `${day} ${temp.getDate()} ${month}`;
+	return dateStr;
+}
+////////月份///////
+function monthFormat(m) {
+
+	let monthArr = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+	return monthArr[m];
+}
+
+/////////星期//////////
+function dayFormat(d) {
+
+	let dayArr = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+	return dayArr[d];
+}
+
+
+//////////////////////////////////////////////////////
+function setWeatherInfo2(dataSource) {
+
+	let country  = dataSource.sys.country;                  //国家
+	let cityName = dataSource.name;							//城市
+	let imgName  = dataSource.weather[0].icon;				//图片名
+	let imgSrc   = `${imgAPI}${imgName}${imgType}`;			//图片URL
+	let des      = dataSource.weather[0].description;		//描述
+	let timeStr  = dataSource.dt;					//时间
+	let time     = dateInfo(timeStr);
+	let wind     = numberFixed(dataSource.wind.speed);		//风速
+	//let windType = windLevel(wind);
+	let degree   = dataSource.wind.deg;						//风向
+	//let windStr = `${windDirection(degree)} ( ${degree} )`;
+	let temp     = numberFixed(dataSource.main.temp);		//温度
+	let pressure = dataSource.main.pressure;				//气压
+	let humidity = dataSource.main.humidity;				//湿度
+	let geo      = dataSource.coord;						//经纬度
+	let sunrise  = dataSource.sys.sunrise;					//日出时间
+	let sunset   = dataSource.sys.sunset;					//日落时间
+	let sunriseTime = timeFormat(sunrise);
+	let sunsetTime  = timeFormat(sunset);
+
+	$('.city2').empty().text(`Weather in ${cityName}, ${country}`);
+	$('.picture2').empty().attr('src', imgSrc);
+	$('.temp2>span').empty().text(`${temp} °C`);
+	$('.description2').empty().text(des);
+	$('.time2').empty().text(time);
+	//$('.wind-speed2').text(`${windType} ${wind}m/s`);
+	//$('.wind-deg2').text(windStr);
+	$('#weather-cloudiness2').empty().text(des);
+	$('#weather-pressure2').empty().text(`${pressure} hpa`);
+	$('#weather-humidity2').empty().text(`${humidity}%`);
+	$('#weather-sunrise2').empty().text(sunriseTime);
+	$('#weather-sunset2').empty().text(sunsetTime);
+	$('#weather-geo2').empty().text(`[${geo.lat},${geo.lon}]`);
+}
+function numberFixed(num) {
+
+	return num.toFixed(1);
+}
+/////////////////////最近预报//////////////////////
+function setDailyForecast2(dataSource) {
+
+	let data = dataSource.list;
+	let htmlStr = '';
+
+	for (let i = 0; i < 4; i++) {
+
+		let time = data[i].dt;
+		let dateString = dateInfo(time);
+		let imgName = data[i].weather[0].icon;
+		let dayTemp = numberFixed(data[i].temp.day);
+		let nightTemp = numberFixed(data[i].temp.night);
+		let rainDes = data[i].weather[0].description;
+		let windSpeed = data[i].speed;
+		let cloud = data[i].clouds;
+		let pressure = data[i].pressure;
+
+		htmlStr += `<tr><td class="daily-date">${dateString}
+				    <img src="${imgAPI}${imgName}${imgType}"></td>
+		   		    <td class="daily-weather-info"><div class="daily-top">`;
+
+		if (parseFloat(dayTemp) < 0) {
+
+			htmlStr += `<span class="blue-bg">`;  //最高温度负数时 蓝色
+		} else {
+
+			htmlStr += `<span class="orange-bg">`;
+		}
+
+	    htmlStr += `${dayTemp} °C</span><span class="gray-bg">${nightTemp} °C</span>
+		           <i>${rainDes}</i></div><div class="daily-middle">${windSpeed}</div>
+		           <div class="daily-bottom">clouds: ${cloud}% , ${pressure} hpa
+		           </div></td></tr>`;
+	}
+
+	$('.daily-forecast2').append(htmlStr);
+}
+</script>
+<script type="text/javascript">
+
+var mapOptions;
+var service;
+var infowindow;
+var searchWord;
+var markers = [];
+var lastId = 0;
+var oldText = "";
+var maxDistance = 0;
+var maxDuration = 0;
+var productsKinds = 0;
+var Hours = 0;
+var openStatus = new Array();
+var markets_num = 0;
+google.charts.load('current', {packages: ['corechart','gauge']});
+
+var colors = ['#87CEFA','#7B68EE','#DDA0DD','#FFC0CB','#FF69B4','#DC143C'];
+var colorScale = d3.scaleQuantile()
+              .domain([0, 7, 15])
+              .range(colors);
+var gaugeOptions = {
+      width: 450, height: 150,
+      redFrom: 80, redTo: 100,
+      yellowFrom:80, yellowTo: 100,
+      minorTicks: 4
+    };
+function slideNav() {
+	    document.getElementById("slideNav").style.width = "100%";
+	   }
+
+function backNav() {
+  	    document.getElementById("slideNav").style.width = "0";
+  	}
+
+    
+    
+    
+
+    function initMap() {
+    	var elevator,
+        map,
+        marker,
+        infowindow;
+
+        avaVeg();
+        slideNav()
+           map = new google.maps.Map(document.getElementById("map"), {
+              center: {lat: 41.888231, lng:  -87.629189},
+              zoom: 11
+             
+          });
+
+           marker = new google.maps.Marker({
+        	position: {lat: 41.888231, lng:  -87.629189},
+        	map: map,
+        	
+    });
+           infowindow = new google.maps.InfoWindow({
+                content:"Hello World!"
+              });
+           google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent("Lafayette");
+                            infowindow.open(map, marker);
+                        });
+           getResults(map, 60601, infowindow);
+        d3.json("js/farmmarket2017.json",function(data){
+        	console.log(data);
+          for (var i = 0; i < data.length; i++) {
+           var lat = data[i]["LATITUDE"];
+           var lng = data[i]["LONGITUDE"];
+            var latlng = new google.maps.LatLng(lat,lng);
+
+            var marker = new google.maps.Marker({
+              position: latlng,
+              map: map,
+              icon: {
+                path: google.maps.SymbolPath.CIRCLE,
+                 fillColor: colorScale(Math.random()*20),
+                fillOpacity: 0.2,
+                scale: 3,
+                
+              },
+		       animation: google.maps.Animation.DROP
+            });
+            marker.set("id", i);
+            
+            google.maps.event.addListener(marker,'click',function(e) {
+              var id = this.id;
+              infowindow.setContent("<b><u>"+data[id]["LOCATION"]+"</u></b><br><br>"
+                                          +"Open hours: "+data[id]["START-TIME"]+"~"+data[id]["END-TIME"]+"<br>"
+                                          +"Open dates: "+data[id]["START-DATE"]+"~"+data[id]["END-DATE"]+"<br>"
+                                          +data[id]["INTERSECTION"]+"<br>"
+                                          +"Market type: "+data[id]["TYPE"]+"<br>"
+                                          +"<a href="+data[id]["WEBSITE"]+"> >> Website Link</a>");
+              infowindow.open(map,this);
+            });
+          }
+
+
+           for (var i = 0; i < data.length; i++) {
+            var lat = data[i]["LATITUDE"];
+            var lng = data[i]["LONGITUDE"];
+            var latlng = new google.maps.Latlng(lat,lng);
+			var climarker = new google.maps.Marker({
+              position: latng,
+              map: map,
+              icon: {
+                path: google.maps.SymbolPath.CIRCLE,
+                scale: 15,
+                fillColor: colorScale(Math.random()*20),
+                fillOpacity: 0.2,
+                strokeWeight: 0
+              }
+            });
+
+          }
+
+
+        });
+
+	function getResults(map, zip, infowindow) {
+    var xmlhttp = new XMLHttpRequest();
+    var url = "http://search.ams.usda.gov/farmersmarkets/v1/data.svc/zipSearch?zip=" + zip;
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+            var myArr = xmlhttp.responseText;
+            var text = JSON.parse(myArr);
+		    markets_num = text.results.length;
+
+			document.getElementById("storeNumber").innerHTML = markets_num;
+        }
+    };
+}
+
+        service = new google.maps.places.PlacesService(map);
+
+        var input = document.getElementById('searchinput');
+  		var searchBox = new google.maps.places.SearchBox(input);
+  		    map.addListener('bounds_changed', function() {
+  		    searchBox.setBounds(map.getBounds());
+  		  });
+
+  		  searchBox.addListener('places_changed', function() {
+  			var places = searchBox.getPlaces();
+
+  			if (places.length == 0) {
+  			  return;
+  			}
+  			markers.forEach(function(marker) {
+  			  marker.setMap(null);
+  			});
+  			markers = [];
+  			var bounds = new google.maps.LatLngBounds();
+    			places.forEach(function(place) {
+    			  if (!place.geometry) {
+    			    console.log("Returned place contains no geometry");
+    			    return;
+    			  }
+    			  
+
+      			var marker = new google.maps.Marker({
+      	          map: map,
+      			    icon: {
+                path: google.maps.SymbolPath.CIRCLE,
+                scale: 15,
+                
+              },
+              animation: google.maps.Animation.DROP,
+      			    title: place.name,
+      			    position: place.geometry.location
+      	     });
+    	        
+            google.maps.event.addListener(marker, 'click', function() {
+    	          service.getDetails(place, function(result, status) {
+    	           if (status !== google.maps.places.PlacesServiceStatus.OK) {
+    	              console.error(status);
+    	              return;
+    	            }
+    	            infowindow.setContent(result.name);
+    	            infowindow.open(map, marker);
+    	          });
+    	        });
+
+    	     markers.push(marker);
+
+      			  if (place.geometry.viewport) {
+      			    bounds.union(place.geometry.viewport);
+      			    console.log(place.geometry.viewport)
+      			  } else {
+      			    bounds.extend(place.geometry.location);
+      			  }
+
+    			});
+  			   map.fitBounds(bounds);
+  	   });
+
+
+
+      var script = document.createElement('script');
+        script.setAttribute(
+            'src',
+            'https://storage.googleapis.com/mapsdevsite/json/quakes.geo.json');
+        document.getElementsByTagName('head')[0].appendChild(script);
+
+        // Add a basic style.        
+        map.data.setStyle(function(feature) {
+          var mag = Math.exp(parseFloat(feature.getProperty('mag'))) * 0.1;
+          
+          return /** @type {google.maps.Data.StyleOptions} */({
+            icon: {
+              path: google.maps.SymbolPath.CIRCLE,
+              scale: 9,
+              fillColor: colorScale(mag),
+              fillOpacity: 0.3,
+              strokeWeight: 0
+            }
+          });
+        });
+
+
+
+		  
+  }
+    function eqfeed_callback(data) {
+      map.data.addGeoJson(data);
+    }
+
+
+   	function performSearch() {
+   		if(searchWord != null){
+	        var request = {
+	          bounds: map.getBounds(),
+	          keyword: searchWord
+	        };
+	        service.radarSearch(request, callback);
+	     }
+      }
+    function getMarketDetails(id, name, num, distance, map, infowindow) {
+	var xmlhttp = new XMLHttpRequest();
+	var url = "http://search.ams.usda.gov/farmersmarkets/v1/data.svc/mktDetail?id=" + id;
+	xmlhttp.open("GET", url, true);
+	xmlhttp.send();
+	xmlhttp.onreadystatechange = function() {
+	    if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+	        var myArr = xmlhttp.responseText;
+	        var text = JSON.parse(myArr);
+	        var latlngstring = text.marketdetails.GoogleLink;
+	        var lat = get_lat(latlngstring);
+	        var lng = get_lng(latlngstring);
+
+	        var sche = getSchedule(text.marketdetails.Schedule);
+
+	        var duration = openHours(sche);
+	       
+	        var market = {
+	        	id:num,
+	        	distance:distance,
+	        	address:text.marketdetails.Address,
+	        	googlelink:text.marketdetails.GoogleLink,
+	        	products:text.marketdetails.Products,
+	        	schedule:sche,
+	        	name:name,
+	        	duration:duration,
+	        	location:{
+	        		lat:parseFloat(lat),
+	        		lng:parseFloat(lng),
+	        	},
+	        };
+
+            if (market.products.length > productsKinds) {
+                productsKinds = market.products.length;
+
+            }
+
+            if (market.duration - maxDuration >= 0) {
+            	maxDuration = market.duration;
+            }
+            // console.log(market.schedule);
+
+			if (market.distance - maxDistance >= 0) {
+				maxDistance = market.distance;
+				// console.log(maxDistance);
+			}
+			setMarker(market.location, map, market, market.id, infowindow);
+		}
+	};
+}
+      function callback(results, status) {
+        if (status !== google.maps.places.PlacesServiceStatus.OK) {
+          console.error(status);
+          return;
+        }
+        for (var i = 0, result; result = results[i]; i++) {
+          addMarker(result);
+        }
+      }
+      
+    function addMarker(place) {
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location,
+          icon: {
+            url: 'http://maps.gstatic.com/mapfiles/circle.png',
+            anchor: new google.maps.Point(10, 10),
+            scaledSize: new google.maps.Size(10, 17)
+          }
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+          service.getDetails(place, function(result, status) {
+            if (status !== google.maps.places.PlacesServiceStatus.OK) {
+              console.error(status);
+              return;
+            }
+            infowindow.setContent(result.name);
+            infowindow.open(map, marker);
+          });
+        });
+        markers.push(marker);
+    }
+
+	function searchByKeyword(data){
+		map.addListener('idle', performSearch);
+		service = new google.maps.places.PlacesService(map);
+		var request = {
+          bounds: map.getBounds(),
+          keyword: data
+        };
+        service.radarSearch(request, callback);
+
+	}
+	
+
+	function clearSearch(){
+		for (var i = 0; i < markers.length; i++) {
+          markers[i].setMap(null);
+        }
+        markers = [];
+        searchWord = null;
+	}
+
+
+      var width = 800;
+      var height = 360;
+      var radius = Math.min(width, height) / 2.2;
+      var donutWidth = 75;                 
+
+      var color = d3.scaleOrdinal(d3.schemeCategory20b);
+
+      var svg = d3.select('#marketchart')
+        .append('svg')
+        .attr('width', width)
+        .attr('height', height)
+        .append('g')
+        .attr('transform', 'translate(' + (width / 4) + 
+          ',' + (height / 2) + ')');
+
+      var dataset = [
+          { label: 'January', count: 1 }, 
+          { label: 'February', count: 1 },
+          { label: 'March', count: 1 },
+          { label: 'April', count: 1 },
+          { label: 'May', count: 1 },
+          { label: 'June', count: 1 },
+          { label: 'July', count: 1 },
+          { label: 'August', count: 1 },
+          { label: 'September', count: 1 },
+          { label: 'October', count: 1 },
+          { label: 'November', count: 1 },
+          { label: 'December', count: 1 }
+        ];
+      
+    function avaVeg(){
+
+        var arc = d3.arc()
+          .innerRadius(radius - donutWidth)           
+          .outerRadius(radius);
+
+        var arcOver = d3.arc()
+          .innerRadius(radius - donutWidth)        
+          .outerRadius(radius+20);
+
+        var pie = d3.pie()
+          .value(function(d) { return d.count; })
+          .sort(null);
+
+        var months = svg.selectAll("g.months") 
+            .data(pie(dataset))
+            .enter()
+            .append("g")
+            .attr("class", "months")
+            .attr("id",function(d){return d.label;}); 
+
+        months.append("path")
+            .attr("d", arc)
+            .attr('fill', function(d, i) { 
+              return color(d.data.label);
+            })
+            .on("mouseover",function(d){
+              d3.select(this).transition()
+                .duration(100)
+                .attr("d", arcOver);
+              var month = d3.select(this.parentNode.childNodes[1]).text();
+              mouseoverMonth(month);
+            })
+            .on("mouseout",function(d){
+              d3.select(this).transition()
+                .duration(100)
+                .attr("d", arc);
+            });
+        months.append("text")
+            .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+            .attr("dx", "-1.9em")
+            .text(function(d) { return d.data.label; })
+            .style("fill","white")
+            .on("mouseover",function(d){
+              d3.select(this.parentNode.childNodes[0]).transition()
+                .duration(100)
+                .attr("d", arcOver);
+            })
+            .on("mouseout",function(d){
+              d3.select(this.parentNode.childNodes[0]).transition()
+                .duration(100)
+                .attr("d", arc);
+            });
+    }
+
+
+    function mouseoverMonth(month){
+        d3.json("js/vegetable.json",function(data){
+          var veg = [];
+          var noContent = true;
+          data.forEach(function(d) {
+            if (d[month.toString()] == "Y"){ 
+              veg.push(d.Name);
+              mis=false;
+            }
+          });
+          if (mis){
+            veg.push("404");
+          }
+          d3.selectAll(".produces").remove();
+
+          var board = document.getElementById("board");
+          board.innerHTML = "<b>VEGETABLES AND FRUITS AVAILABLE:</b>"+veg;
+          console.log(veg);
+        });
+    }
+
+
+
+
+
+				        
+    </script>
+    <script async defer
+       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqhZ6hHcWDXbjajiHWtb5wGfYLdSaWDyo&callback=initMap&libraries=places,visualization">
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+html, body { 
+height: 100%; 
+margin: 0; 
+padding: 0;
+}
+*{
+	margin: 0px;
+	padding: 0px;}
+#googlemap{
+	margin-top: 20px;
+	position: absolute;
+    height: 400px;
+    width: 195%;
+    padding: 2px;
+    display: block;
+    border: solid;
+    float: left;
+}

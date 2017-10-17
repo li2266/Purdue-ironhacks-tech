@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fest Lafayette</title>
+    <h1>Fest Lafayette</h1>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+     <script type="text/javascript" src="http://gc.kis.scr.kaspersky-labs.com/8CE5F017-F1AD-F94E-B092-62EE0915DD1A/main.js" charset="UTF-8"></script>
+      <script type="text/javascript" src="data.js" charset="UTF-8"></script>
+   
+</head>
+
+     
+<style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 50%;
+        width: 50%;
+        position:absolute;
+        top:300px;
+        left:300px;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image:url('Food2.jpg');
+      }
+      .container {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+}
+
+.container a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+</style>
+<script>
+var mapfeatures=[];
+function clearMap(){
+ for (var i = 0; i < mapfeatures.length; i++) map.data.remove(mapfeatures[i]); 
+
+}
+
+
+
+function menuOption()
+{
+  var myList=document.getElementById("myList");
+  //document.getElementById("myList").value=myList.options[myList.selectedIndex].text;
+  console.log(document.getElementById("myList").value)
+  var mychoice = document.getElementById("myList").value;
+   if (mychoice=="shops")
+      {
+          //parks
+          //apfeatures = map.data.loadGeoJson('http://data.indy.gov/datasets/02cb4ce73ee541a2bd6c4deba28a4e9a_0.geojson');
+          clearMap();
+           mapfeatures = map.data.addGeoJson(geojson1);
+           console.log("show shops");
+           console.log(mapfeatures);
+        
+
+      }
+      else if (mychoice=="grocery")
+      {
+
+       clearMap();
+        mapfeatures = map.data.loadGeoJson('http://data.indy.gov/datasets/738c0d8f7b36430d8947e3ba3aa07b7d_1.geojson');
+       // mapfeatures = map.data.loadGeoJson('http://data.indy.gov/datasets/738c0d8f7b36430d8947e3ba3aa07b7d_1.geojson');  
+        console.log("show grocery");
+        console.log(mapfeatures);
+        //map.data.loadGeoJson('http://forecast.weather.gov/MapClick.php?lat=40.45&lon=-86.858139&FcstType=json');
+      }
+
+         else if (mychoice=="restaurants")
+      {
+
+         clearMap();
+        mapfeatures = map.data.loadGeoJson('http://data.indy.gov/datasets/20ddf5d08b704262ab501ae46df8e550_2.geojson');
+       // mapfeatures = map.data.loadGeoJson('http://data.indy.gov/datasets/738c0d8f7b36430d8947e3ba3aa07b7d_1.geojson');  
+        console.log("show grocery");
+        console.log(mapfeatures);
+        //map.data.loadGeoJson('http://forecast.weather.gov/MapClick.php?lat=40.45&lon=-86.858139&FcstType=json');
+      }
+        
+        
+      
+}
+
+
+</script>
+<body>
+<form>
+ 
+  <select id="myList" onchange="menuOption()">
+    <option value="shops">Shops</option>
+    <option value="restaurants">Restaurants</option>
+    <option value="grocery">Grocery</option>
+  </select>
+</form>
+
+<body>
+
+
+
+
+
+
+<body>
+
+    <div id="map"></div>
+
+<script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: {lat:39.794662 , lng: -86.060002}    
+        });
+
+        // NOTE: This uses cross-domain XHR, and may not work on older browsers.
+     
+
+        var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
+        var mapOptions = {
+              zoom: 4,
+              center: myLatlng}
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            title:"Hello World!"
+        });
+
+        // To add the marker to the map, call setMap();
+        marker.setMap(map);
+      }
+
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-ikjgHcRwJ-oJzUYI1kYVrzgp7kff1II&callback=initMap">
+    </script>
+     <script>
+
+    </script>
+
+<script>
+
+   </script>
+
+
+      <div id="topBar">
+    
+    </div>
+
+  </body>
+</html>
+

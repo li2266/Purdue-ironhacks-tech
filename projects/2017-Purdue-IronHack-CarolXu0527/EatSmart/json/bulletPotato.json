@@ -1,0 +1,5 @@
+[
+  {"title":"Season","subtitle":"Seasonality Charts","ranges":[0,0,10],"measures":[6,10],"markers":[7]},
+  {"title":"Profit","subtitle":"%","ranges":[20,25,30],"measures":[21,23],"markers":[26]},
+  {"title":"Order Size","subtitle":"US$, average","ranges":[350,500,600],"measures":[100,320],"markers":[550]}
+]

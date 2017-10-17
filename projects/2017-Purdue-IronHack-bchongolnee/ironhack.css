@@ -1,0 +1,73 @@
+.left
+{
+
+	padding-left: 2em;
+	float: left;
+	width: 40%;
+}
+.banner
+{
+	margin-bottom: 2em;
+	position: relative;
+}
+
+.right
+{
+	float: right;
+	padding-right: 2em;
+	width: 45%;
+}
+
+.match
+{
+	background: #a39f97;
+	height: 50em;
+	padding: 5em;
+}
+.scatterplot
+{
+	background: #bfbdb9;
+	height: 20em;
+	margin-bottom: 1em;
+}
+footer {
+	clear: both;
+    position: relative;
+    z-index: 10;
+    background: #d3d3d3;
+    text-align: center;
+    padding: 1em;
+
+}
+.pie
+{
+	background: #F0EDE5;
+	display: inline-block;
+	margin: 1em 2em;
+	height: 12em;
+	width: 40%;
+	float: right;
+	padding: 1em;
+}
+.map
+{
+	display: inline-block;
+	width: 57%;
+}
+
+.arc text {
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+.arc path {
+  stroke: #fff;
+}
+
+.tooltip {
+			  position: absolute;
+			  width: 200px;
+			  height: 28px;
+			  pointer-events: none;
+		}
+

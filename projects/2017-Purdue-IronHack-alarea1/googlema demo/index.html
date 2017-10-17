@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="main.css">
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+<script src="script.js"></script>
+
+</head>
+
+	<body>
+		<div id="gmap_canvas"></div>
+		<div class="actions">
+		<div class = "button">
+		<label for="gmap_where">where:</label>
+		<input id="gmap_where" type="text" name="gmap_where" /></div>
+		<div id="button2" class="button" onclick="findAddress();return false;">search for address</div>
+		<div class="button">
+		<lable for="gmap_keyword">keyword(option):</lable>
+		<input id="gmap_keyword" type="text" name="gmap_where" /></div>
+		<div class="button">
+		<select id="gmap_type">
+		<option value="art_gallery">art gallery</option>
+		<option value="atm">atm</option>
+		<option value="bank">bank</option>
+		<option value="bar">bar</option>
+		<option value="cafe">cafe</option>
+		<option value="food">food</option>
+			
+		</select>
+		</div>
+		<div class="button">
+		<label for="gmap_radius">Radius:</label>
+		<select id="gmap_radius">
+			<option value="500">500</option>
+			<option value="1000">1000</option>
+            <option value="1500">1500</option>
+		</select>
+		</div>
+		<input type="hidden" id="lat" name="lat" value="40.7143528" />
+		<input type="hidden" id="lng" name="lng" value="-74.0059731" />
+		<div id="button1" class="button" onclick="findPlaces(); return false;">Search for objects</div>
+		</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,35 @@
+{
+  "js": {
+    "errors": [],
+    "resourceErrors": [],
+    "messages": []
+  },
+  "css": {
+    "errors": [],
+    "warnings": [
+      {
+        "line": "10",
+        "level": "2",
+        "message": "You have no color set (or color is set to transparent) but you have set a background-color. Make sure that cascading of colors keeps the text reasonably legible.",
+        "type": "no-color",
+        "uri": "https://goldironhack.github.io/gold/1/2017-Purdue-IronHack-ynteng/RoadTripAgent/RoadTripAgent/Project_Readme.html"
+      },
+      {
+        "line": "46",
+        "level": "2",
+        "message": "Redefinition of margin-bottom",
+        "context": ".section h2",
+        "type": "redefinition",
+        "uri": "https://goldironhack.github.io/gold/1/2017-Purdue-IronHack-ynteng/RoadTripAgent/RoadTripAgent/Project_Readme.html"
+      },
+      {
+        "line": "81",
+        "level": "2",
+        "message": "You have no background-color set (or background-color is set to transparent) but you have set a color. Make sure that cascading of colors keeps the text reasonably legible.",
+        "type": "no-background-color",
+        "uri": "https://goldironhack.github.io/gold/1/2017-Purdue-IronHack-ynteng/RoadTripAgent/RoadTripAgent/Project_Readme.html"
+      }
+    ]
+  },
+  "html": []
+}

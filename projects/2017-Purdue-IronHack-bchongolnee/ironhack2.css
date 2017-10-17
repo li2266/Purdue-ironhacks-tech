@@ -1,0 +1,64 @@
+.left
+{
+
+	padding-left: 2em;
+	float: left;
+	width: 40%;
+}
+.banner
+{
+	margin-bottom: 2em;
+	position: relative;
+}
+
+.right
+{
+	float: right;
+	padding-right: 2em;
+	width: 45%;
+}
+
+.match
+{
+	background: #a39f97;
+	height: 35em;
+	padding: 1em 5em 2em 5em;
+}
+.scatterplot
+{
+	background: #bfbdb9;
+	height: 20em;
+	margin-bottom: 1em;
+}
+footer {
+	clear: both;
+    position: relative;
+    z-index: 10;
+    background: #d3d3d3;
+    text-align: center;
+    padding: 1em;
+
+}
+.pie
+{
+	display: inline-block;
+	margin: 1em 0em;
+	height: 12em;
+	width: 40%;
+	float: right;
+	padding-left: 2em;
+}
+.map
+{
+	display: inline-block;
+	width: 57%;
+}
+
+
+.tooltip {
+			  position: absolute;
+			  width: 200px;
+			  height: 28px;
+			  pointer-events: none;
+		}
+

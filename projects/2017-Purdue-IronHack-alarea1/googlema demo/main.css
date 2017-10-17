@@ -1,0 +1,48 @@
+#gmap_canvas {
+height: 700px;
+position: relative;
+width: 900px;
+}
+.actions {
+background-color: #FFFFFF;
+bottom: 30px;
+padding: 10px;
+position: absolute;
+right: 30px;
+z-index: 2;
+border-top: 1px solid #abbbcc;
+border-left: 1px solid #a7b6c7;
+border-bottom: 1px solid #a1afbf;
+border-right: 1px solid #a7b6c7;
+-webkit-border-radius: 12px;
+-moz-border-radius: 12px;
+border-radius: 12px;
+}
+.button {
+background-color: #d7e5f5;
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d7e5f5), color-stop(100%, #cbe0f5));
+background-image: -webkit-linear-gradient(top, #d7e5f5, #cbe0f5);
+background-image: -moz-linear-gradient(top, #d7e5f5, #cbe0f5);
+background-image: -ms-linear-gradient(top, #d7e5f5, #cbe0f5);
+background-image: -o-linear-gradient(top, #d7e5f5, #cbe0f5);
+background-image: linear-gradient(top, #d7e5f5, #cbe0f5);
+border-top: 1px solid #abbbcc;
+border-left: 1px solid #a7b6c7;
+border-bottom: 1px solid #a1afbf;
+border-right: 1px solid #a7b6c7;
+-webkit-border-radius: 12px;
+-moz-border-radius: 12px;
+border-radius: 12px;
+-webkit-box-shadow: inset 0 1px 0 0 white;
+-moz-box-shadow: inset 0 1px 0 0 white;
+box-shadow: inset 0 1px 0 0 white;
+color: #1a3e66;
+font: normal 11px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+line-height: 1;
+margin-bottom: 5px;
+padding: 6px 0 7px 0;
+text-align: center;
+text-shadow: 0 1px 1px #fff;
+width: 150px;
+}
+

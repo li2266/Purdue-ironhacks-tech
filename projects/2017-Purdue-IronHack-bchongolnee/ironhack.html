@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.7.2/d3.min.js"></script>
+  <script src="d3pie.min.js"></script>
+  <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <link rel="stylesheet" type="text/css" href="ironhack2.css">
+  <script type="text/javascript" src="ironhack2.js"></script>
+  <title>FoodMatch</title>
+</head>
+<body>
+<div class="banner">
+<img src="header.jpg" alt="Benya's logo" style="width:100%; margin-top: -8em;"> 
+</div>
+
+<div class="left">
+<!--freshness level
+  <h4>Enter the level of freshness you want your food (0-10)</h4>
+  <h5>10 being very fresh</h5>
+  <input type="text" id="freshness" value="">
+  <p>Click the "Get freshness level" button to get the text in the text field.</p>
+  <button onclick="getfresh_num()">Get freshness level</button>
+  <p id="freshness-demo"></p>
+<hr />
+
+-->
+
+</div>
+
+<div class="right">
+<!--price range
+  <h4>Enter the price range you want your food (0-10)</h4>
+  <h5> 10 being the most expensive </h5>
+  <input type="text" id="price" value="">
+  <p>Click the "Get price range" button to get the text in the text field.</p>
+  <button onclick="getprice_num()">Get price range</button>
+  <p id="price-demo"></p>
+<hr />
+<h1>example for jQuery</h1>
+    <button id="testbtn">test</button>
+    <button id="weather">Weather</button>
+<br>
+-->
+</div>
+
+<div class="map">
+  <!--<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvglP2pH4hBX4C98g9VGF8bKG_nLkB2h8&callback=initMap">
+    </script>-->
+    <iframe src="https://www.google.com/maps/d/embed?mid=1PH8KhJgRf0_KJwJtRU8yCTto5EI" width="100%" height="480"></iframe>
+
+</div>
+<div class="pie"> 
+    <h2>It is Spring, bananas, carrots, brocolli, and strawberries are the food of the season.</h2> <br />
+    <div id="piechart" style="width: 620px; height: 350px;"></div>
+</div>
+
+
+  <div class="match">
+    <h2> Stores matched</h2>
+    <h3>Meijer</h3>
+    <h3>Walmart Super Center</h3>
+    <h3>Asia Market</h3>
+    <h3>Payless Super Market</h3>
+    <h3>Marsh Super Market</h3>
+    <h3>ALDI</h3>
+    <h3>Fresh City Market</h3>
+    <h3>Khyber Super Market</h3>
+    <h3>L A Village Food Mart</h3>
+    <h3>C&T Market</h3>
+    <h3>Better World Market</h3>
+    <h3>City Foods</h3>
+    <h3>Lafayette Farmer's Market</h3>
+  </div>
+  <div class="scatterplot">
+    <h2> Ratings bar graph</h2>
+    <table width="1200"><tr><td id="Tbar" valign="top"></td><td id="Tplot"></td></tr></table>
+  </div>
+
+  </div>
+
+</body>
+<footer>© Copyright FoodMatch 2017</footer>
+</html>

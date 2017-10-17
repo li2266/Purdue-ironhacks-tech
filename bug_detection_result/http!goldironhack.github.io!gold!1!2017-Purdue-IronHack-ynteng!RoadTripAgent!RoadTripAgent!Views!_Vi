@@ -1,0 +1,11 @@
+{
+  "js": {
+    "errors": [],
+    "resourceErrors": [
+      "https://goldironhack.github.io/gold/1/2017-Purdue-IronHack-ynteng/RoadTripAgent/RoadTripAgent/Views/_ViewStart.cshtml failed to be loaded. Status: 404"
+    ],
+    "messages": []
+  },
+  "css": {},
+  "html": []
+}
